@@ -11,6 +11,10 @@ const app = express();
 app.use(formidable());
 app.use(cors());
 
+app.get("/", (req, res)=>{
+  res.json("Welcome to my TripAdvisor-backend 🚀😎")
+})
+
 app.post("/form", async (req, res) => {
   try {
     const data = {
