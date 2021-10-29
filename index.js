@@ -11,7 +11,7 @@ const app = express();
 app.use(formidable());
 app.use(cors());
 
-app.post("https://trip-advisorback.herokuapp.com/form", async (req, res) => {
+app.post("/form", async (req, res) => {
   try {
     const data = {
       from: `${req.fields.firstname} ${req.fields.lastname}  <${req.fields.email}>`,
